@@ -13,6 +13,6 @@ public class UserController {
 
 	@GetMapping("/{number}")
 	public User getUser(@PathVariable long number) {
-		return new User("Abhi", 12345, "abhi@123");
+		return new User("Shweta", 123, "shweta@123");
 	}
 }
