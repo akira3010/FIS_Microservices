@@ -1,0 +1,16 @@
+server:
+  port: 8083
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: employeeModule
+        uri: http://localhost:8089/
+        predicates:
+        - Path=/employees/**
+      - id: userModule
+        uri: http://localhost:8088/
+        predicates:
+        - Path=/users/**
+
